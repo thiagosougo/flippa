@@ -1,0 +1,410 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1vw;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(219, 219, 219);
+}
+
+button:hover,
+a:hover {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2e2e2e;
+  width: 4px;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+}
+
+.container .section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  background: rgb(219, 219, 219);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.slider {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 10% 1fr 1fr 10%;
+  min-height: 10vh;
+  align-items: center;
+  color: white;
+}
+
+#logo {
+  grid-column: 2/3;
+  font-size: 24px;
+  font-weight: 900;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.hamburguer {
+  justify-self: end;
+  font-size: 2rem;
+}
+
+.hamburguer {
+  cursor: pointer;
+}
+
+section {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  height: 60%;
+  width: 100%;
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.headline {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  font-size: 4rem;
+  transform: translate(-20%, -70%);
+  color: #fff;
+  z-index: 3;
+  font-weight: 500;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+.subtitulo {
+  font-size: 2rem;
+  transform: translate(-20%, -68%);
+  top: 80%;
+  font-weight: 300;
+}
+
+.hero::after {
+  content: "";
+  background: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  opacity: 0.3;
+  top: 0;
+}
+
+/*Navbar*/
+.navBar {
+  background: #182522;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBar ul li {
+  padding: 2rem;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.navBar ul li a {
+  font-size: 2rem;
+  transition: 1s;
+  font-weight: 200;
+  color: rgb(219, 219, 219);
+}
+.navBar ul li a:hover {
+  color: #82b298;
+}
+
+.telaMenu {
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+
+/* DEPOIMENTO */
+.entrevista {
+  display: flex;
+}
+
+.textos {
+  padding: 7rem;
+}
+
+.topico,
+.submenu {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+.topico p {
+  margin-left: 1rem;
+  font-weight: 700;
+  color: #2e2e2e;
+}
+
+.quote {
+  color: rgb(231, 231, 231);
+  background: #2e2e2e;
+  padding: 0.4rem;
+  font-size: 2rem;
+  border-radius: 50%;
+}
+
+.entrevista h2 {
+  font-size: 5rem;
+  width: 47.8rem;
+  color: #2e2e2e;
+}
+
+.entrevista .texto {
+  width: 30rem;
+  margin-bottom: 2rem;
+  line-height: 1.5rem;
+}
+
+.entrevista div {
+  z-index: 1;
+}
+
+.entrevista img {
+  transform: translateX(-30%);
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.entrevista button {
+  padding: 0.5rem;
+  transition: 0.6s;
+  display: flex;
+  background: #2e2e2e;
+  color: #fff;
+  align-items: center;
+}
+
+.entrevista button:hover,
+.entrevista button span:hover {
+  background: transparent;
+  color: #2e2e2e;
+  border: 1px solid #2e2e2e;
+}
+
+/*SECTION 2*/
+
+.section:nth-child(3) {
+  width: 100%;
+  background: url("./img/pexels-michelle-leman-6798706.jpg");
+  background-size: cover;
+  position: relative;
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.reportagens p,
+.reportagens h2 {
+  font-size: 2rem;
+  z-index: 1;
+  color: #2e2e2e;
+  width: 40rem;
+}
+
+.reportagens h2 {
+  font-size: 4rem;
+}
+
+.reportagens p {
+  font-size: 1rem;
+}
+
+.submenu .iconify {
+  margin: 0 10px 0 50px;
+}
+
+.views {
+  margin: 0 10px 0 0 !important;
+}
+
+.maisReportagens ul {
+  margin-top: 5rem;
+  height: 18rem;
+  overflow-y: auto;
+}
+.maisReportagens ul li {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/*RODAPÉ*/
+.section:last-child {
+  background: rgb(226, 226, 226);
+}
+
+.rodape {
+  padding: 2rem 3rem 2rem 5rem;
+}
+
+.rodape h2 {
+  font-size: 4rem;
+  width: 35rem;
+  position: absolute;
+  z-index: 999;
+  display: inline-block;
+  flex-direction: column;
+}
+
+.grades {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: min-content;
+  margin: 0 auto;
+}
+
+.grade {
+  margin: 0;
+  padding: 0;
+  max-width: fit-content;
+}
+
+.grade div {
+  height: 5rem;
+  border-right: 1px solid #c4c4c4;
+}
+
+.grade img {
+  object-fit: cover;
+}
+
+.grade span {
+  font-weight: 600;
+}
+
+.grade:first-child div:nth-child(4),
+.grade:first-child div:nth-child(4) img {
+  width: 15rem;
+  height: 15rem;
+}
+
+.grade:nth-child(2) div:nth-child(7) img,
+.grade:nth-child(3) div:last-child img,
+.grade:nth-child(2) div:nth-child(7) {
+  width: 10rem;
+  height: 10rem;
+}
+
+.grade:nth-child(3) div:nth-child(9) {
+  background: #2e2e2e;
+  color: rgb(226, 226, 226);
+  width: 30rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grade:nth-child(3) div:nth-child(9) input {
+  width: 70%;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.grade:nth-child(3) div:nth-child(9) button {
+  background: #fff;
+  height: 3rem;
+  width: 3rem;
+  font-weight: bold;
+  border-radius: 2%;
+}
+.grade:nth-child(3) div:nth-child(7) {
+  border-left: 3px solid #a3a3a3;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.grade:nth-child(3) div {
+  height: 2.5rem;
+}
+
+.grade:nth-child(4) div:nth-child(1) {
+  width: 10rem;
+  background: #a3a3a3;
+  height: 10rem;
+}
+
+.grade:nth-child(4) div:nth-child(6) {
+  width: 10rem;
+  background: #182522;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(226, 226, 226);
+  transition: 0.5s;
+}
+
+.grade:nth-child(4) div:nth-child(6) .iconify {
+  font-size: 4rem;
+  margin: 0;
+}
+.grade:nth-child(4) div:nth-child(6) span {
+  font-weight: 300;
+}
+.grade a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.grade:nth-child(4) div:nth-child(6):hover {
+  background: #425853;
+}
+
